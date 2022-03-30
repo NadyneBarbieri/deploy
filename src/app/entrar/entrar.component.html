@@ -8,15 +8,15 @@
                     <h1 class="text-center mb-3">Entrar</h1>
                     <div class="form-group">
                         <label for="usuario">Usuário</label>
-                        <input class="form-control" type="text" name="usuario" id="usuario" placeholder="seu usuario">
+                        <input [(ngModel)]='usuarioLogin.usuario' class="form-control" type="text" name="usuario" id="usuario" placeholder="seu usuario">
                     </div>
 
-                    <div class="form-group">
+                    <div [(ngModel)]='usuarioLogin.senha' class="form-group">
                         <label for="senha">senha</label>
                         <input class="form-control" type="password" name="senha" id="senha" placeholder="sua senha">
                     </div>
                 <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn btn-success">Entrar</button>
+                    <button type="submit" class="btn btn-success"(click)="entrar()">Entrar</button>
                 </div>
                 <hr class="mt-5 mb-5">
 
