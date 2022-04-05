@@ -24,7 +24,7 @@ export class TemaDeleteComponent implements OnInit {
     if(environment.token == ''){
       this.router.navigate(['/entrar'])
     }
-    this.idTema =this.route.snapshot.params['id']
+    this.idtema =this.route.snapshot.params['id']
     this.findByIdTema(this.idTema)
     })
   }
@@ -33,11 +33,12 @@ findByIdTema(id:number){
     this.tema= resp
   }) 
 }
-  apagar(){
-    this.TemaService.deleteTema(this.idTema).subscribe(()=>{
-      alert('Tema Apagado com sucesso!')
-      this.router.navigate(['/tema'])
-    })
-  }
 
+apagar(){
+  this.temaService.deleteTema(this.idTema).subscribe(()=>{
+    alert('Tema Apagado com sucesso!')
+    this.router.navigate(['/tema'])
+  })
 }
+
+  
