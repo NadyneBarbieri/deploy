@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { env } from 'process';
 import { environment } from 'src/environments/environment.prod';
 
 @Component({
@@ -11,6 +12,7 @@ export class MenuComponent implements OnInit {
 
 nome = environment.nome
 foto = environment.foto
+id = environment.id
 
 
 
