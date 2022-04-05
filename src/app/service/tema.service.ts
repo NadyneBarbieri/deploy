@@ -3,6 +3,7 @@ import { environment } from './../../environments/environment.prod';
 import { HttpClient, HttpHandler, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Tema } from '../model/Tema';
+import { ROUTER_CONFIGURATION } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -19,8 +20,18 @@ export class TemaService {
     return this.http.get<Tema[]>('http://localhost:8080/tema', this.token)
 
   }
+  getByIdTema(id: number):Observable<Tema>{
+    return this.http.get<Tema>(`http://localhost:8080/tema/${id}`, this.token)
+  }
+
+
   PostTema(tema: Tema): Observable<Tema>{
     return this.http.post<Tema>('http://localhost:8080/tema', tema, this.token)
   }
-  
+  putTema(tema: Tema):Observable<Tema>{
+    return this.http.put<Tema>('http://localhost:8080/tema', tema, this.token)
+  }
+  delete(id:number){
+    return this.http.delete(`http://localhost:8080/tema/${id}', this.token`)
+  }
 }
