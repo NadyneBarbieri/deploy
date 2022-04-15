@@ -8,8 +8,13 @@
     background-size: cover;
 }
 body{
+    
     margin: o;
     padding:0;
     height:100vh;
+}
+
+.container-fluid{
+    background-color: black;
 }
 
