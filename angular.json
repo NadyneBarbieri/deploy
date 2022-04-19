@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "BlogPessoal": {
+    "Front-end": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/blog-pessoal",
+            "outputPath": "dist/front-end",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -29,12 +29,12 @@
             "styles": [
               "src/styles.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css"
-              ],              
+              ],
               "scripts": [
                 "./node_modules/jquery/dist/jquery.js",
                 "./node_modules/popper.js/dist/umd/popper.min.js",
                 "./node_modules/bootstrap/dist/js/bootstrap.js"
-                ]                
+                ]
           },
           "configurations": {
             "production": {
@@ -73,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "BlogPessoal:build:production"
+              "browserTarget": "Front-end:build:production"
             },
             "development": {
-              "browserTarget": "BlogPessoal:build:development"
+              "browserTarget": "Front-end:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "BlogPessoal:build"
+            "browserTarget": "Front-end:build"
           }
         },
         "test": {
@@ -107,5 +107,5 @@
       }
     }
   },
-  "defaultProject": "BlogPessoal"
+  "defaultProject": "Front-end"
 }
